@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic and Islamic Studies Course</title>
+    
+    <style>
+    /* styles.css */
+    
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+body {
+    font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: "Rubik Vinyl", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#hook {
+    background: #e9f5ff;
+    border: 2px solid #007bff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#hook h2 {
+    color: #0056b3;
+}
+
+h2 {
+    color: #007bff;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    text-align: left;
+    outline: none;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.accordion-button {
+    font-weight: bold;
+    margin: 5px 0;
+    border: none;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.accordion-content p {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #343a40;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Arabic and Islamic Studies Crash Course</h1>
+        <p>Intermediate Level (Ibtidaahiyah)</p>
+    </header>
+    <main>
+        <section id="hook">
+            <h2>Why Choose This Course?</h2>
+            <p>
+                Unlock the door to classical knowledge! With this crash course, you’ll not only master the intricacies of Arabic but also connect with centuries of Islamic wisdom. This is your opportunity to deepen your faith, sharpen your skills, and engage with the language of the Qur’an.
+            </p>
+        </section>
+        <section>
+            <h2>Overview</h2>
+            <p>
+                This course is tailored for students at the intermediate level, combining Arabic language skills and Islamic studies to enhance comprehension and understanding of classical texts and Islamic principles.
+            </p>
+        </section>
+        <section>
+            <h2>Key Features</h2>
+            <div class="accordion">
+                <button class="accordion-button">Advanced Arabic Skills</button>
+                <div class="accordion-content">
+                    <p>Delve into intermediate grammar, syntax, and classical text analysis to refine your Arabic proficiency.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-button">Islamic Studies</button>
+                <div class="accordion-content">
+                    <p>Explore Tafseer, Hadith, Fiqh, and Aqeedah, connecting Islamic sciences to everyday life.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-button">Pronunciation</button>
+                <div class="accordion-content">
+                    <p>Master Tajweed rules to recite the Qur'an with accuracy and fluency.</p>
+                </div>
+            </div>
+            <div class="accordion">
+                <button class="accordion-button">Integration</button>
+                <div class="accordion-content">
+                    <p>Understand how Arabic serves as the foundation for engaging with Islamic sciences and principles.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Course Duration</h2>
+            <p>
+                This comprehensive crash course spans <strong>1 year</strong>, with 4 sessions per week, each lasting 1 hour. Flexible scheduling options are available for your convenience.
+            </p>
+        </section>
+        <section>
+            <h2>Who is This Course For?</h2>
+            <p id="target-audience">
+                Students with a basic foundation in Arabic and Islamic studies who are ready to progress to the intermediate level.
+            </p>
+            <button id="details-btn">Learn More</button>
+            <p id="additional-info" style="display: none;">
+                By completing this course, students will enhance their proficiency in Arabic, gain deeper insights into Islamic principles, and build a foundation for advanced studies.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Al-husnā Online Learning Space. All Rights Reserved.</p>
+    </footer>
+    <script>
+    // script.js
+
+// Toggle "Learn More" section
+document.getElementById('details-btn').addEventListener('click', function () {
+    const additionalInfo = document.getElementById('additional-info');
+    if (additionalInfo.style.display === 'none') {
+        additionalInfo.style.display = 'block';
+        this.textContent = 'Show Less';
+    } else {
+        additionalInfo.style.display = 'none';
+        this.textContent = 'Learn More';
+    }
+});
+
+// Accordion functionality
+const accordionButtons = document.querySelectorAll('.accordion-button');
+accordionButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+});
+    </script>
+</body>
+</html>
